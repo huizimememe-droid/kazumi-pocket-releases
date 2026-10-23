@@ -39,7 +39,7 @@ def api(path, method='GET', data=None, binary=False):
                       data=body, headers=headers, method=method)
     with build_opener(SafeRedirect()).open(request, timeout=45) as response:
         raw = response.read(2 * 1024 * 1024)
-    return raw if binary else json.loads(raw)
+    return raw if binary else (json.loads(raw) if raw else None)
 
 
 def validate(release, manifest_bytes):
@@ -72,6 +72,24 @@ def validate(release, manifest_bytes):
 
 def main():
     release = api(f'releases/{RELEASE_ID}')
+    if release['id'] != RELEASE_ID or release['tag_name'] != TAG:
+        raise ValueError('Wrong release identity')
+    local_manifest = Path(__file__).with_name('update.json').read_bytes()
+    if hashlib.sha256(local_manifest).hexdigest() != MANIFEST_HASH:
+        raise ValueError('Committed manifest checksum mismatch')
+    existing = next((a for a in release['assets'] if a['name'] == 'update.json'), None)
+    if existing is None or existing.get('state') != 'uploaded':
+        if not release['draft']:
+            raise ValueError('Refusing to modify published release assets')
+        if existing:
+            api(f"releases/assets/{existing['id']}", 'DELETE')
+        request = Request(f'https://uploads.github.com/repos/{REPO}/releases/{RELEASE_ID}/assets?name=update.json',
+            data=local_manifest, method='POST', headers={
+                'Authorization': 'Bearer '+os.environ['GH_TOKEN'],
+                'Content-Type': 'application/json', 'User-Agent': 'KazumiPocket-Release-Validation'})
+        with build_opener(SafeRedirect()).open(request, timeout=45) as response:
+            json.loads(response.read(1024*1024))
+        release = api(f'releases/{RELEASE_ID}')
     manifest_id = next(a['id'] for a in release['assets'] if a['name'] == 'update.json')
     source = validate(release, api(f'releases/assets/{manifest_id}', binary=True))
     latest_before = api('releases/latest')

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "channel": "kazumi-pocket",
+  "packageId": "com.predidit.kazumi.pocket",
+  "version": "2.4.1",
+  "buildNumber": 20342,
+  "upstreamVersion": "2.4.1",
+  "publishedAt": "2026-10-23T08:59:14.495Z",
+  "notes": "新增B站公开弹幕自动匹配、手动选源和本地XML/JSON导入，默认无需弹弹play开发者凭据。保留融合版播放、续播、下载和独立更新。",
+  "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20342/KazumiPocket-2.4.1-public-danmaku.apk",
+  "sha256": "61aa3e0031b576aff436ba10db51028c2cc7fb9dd6effb2d270fee009b7e926a",
+  "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20342"
+}
