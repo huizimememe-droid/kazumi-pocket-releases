@@ -1,0 +1,20 @@
+name: Publish verified fusion release
+on:
+  push:
+    paths: ['.github/workflows/publish-existing.yml', 'release/publish_existing.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: fusion-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository == 'huizimememe-droid/kazumi-pocket-releases'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Validate uploaded files and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 release/publish_existing.py
