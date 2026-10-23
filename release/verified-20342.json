@@ -1,0 +1,18 @@
+{
+  "releaseId": 421629981,
+  "apk": {
+    "name": "KazumiPocket-2.4.1-public-danmaku.apk",
+    "size": 33653679,
+    "sha256": "61aa3e0031b576aff436ba10db51028c2cc7fb9dd6effb2d270fee009b7e926a"
+  },
+  "source": {
+    "name": "KazumiPocket-2.4.1-public-danmaku-source.zip",
+    "size": 25913210,
+    "sha256": "b9a3d2d9be24b31073dd79e56167840e8a974670e3016932106aba4486c66e5c"
+  },
+  "manifest": {
+    "name": "update.json",
+    "size": 737,
+    "sha256": "fb8b11563c253c6884e514ca09c50e7aa3aaebab0451534a03721a95d15cb87a"
+  }
+}

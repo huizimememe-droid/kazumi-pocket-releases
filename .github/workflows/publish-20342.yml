@@ -1,0 +1,18 @@
+name: Publish verified public danmaku release
+on:
+  push:
+    paths:
+      - .github/workflows/publish-20342.yml
+      - release/publish_20342.py
+      - release/verified-20342.json
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Validate uploaded assets and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 release/publish_20342.py
