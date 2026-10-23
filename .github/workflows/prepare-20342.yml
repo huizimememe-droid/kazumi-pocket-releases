@@ -1,0 +1,21 @@
+name: Prepare public danmaku release
+on:
+  push:
+    paths:
+      - .github/workflows/prepare-20342.yml
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create draft only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view pocket-20342 >/dev/null 2>&1; then
+            echo "Release already exists; leaving it unchanged."
+            exit 0
+          fi
+          gh release create pocket-20342 --draft --title "Kazumi 融合版 2.4.1 · 20342 公开弹幕" --notes "新增 B 站公开弹幕和本地 XML/JSON 导入；默认无需弹弹play开发者凭据。保留融合版独立更新、续播、线路记忆和下载功能。公开弹幕覆盖范围受来源影响，未匹配时可手动选择来源。"
