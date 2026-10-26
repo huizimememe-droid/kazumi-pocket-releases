@@ -1,0 +1,28 @@
+name: Prepare cinema enhancement 20347
+on:
+  push:
+    paths:
+      - .github/workflows/prepare-20347.yml
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create draft and temporary artifact transport branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$(gh api repos/$GH_REPO/releases/latest --jq .tag_name)" = "pocket-20346" ]; then
+            gh api --method PATCH repos/$GH_REPO/releases/424023252 -F prerelease=true -f name="20346 已撤回：启动回归，等待20347修复" >/dev/null
+            gh api --method PATCH repos/$GH_REPO/releases/423974341 -f make_latest=true >/dev/null
+          fi
+          if ! gh release view pocket-20347 >/dev/null 2>&1; then
+            gh release create pocket-20347 --draft --title "Kazumi 融合版 2.4.2 · 20347 影视播放器整合" --notes "修复画质偏好在存储初始化前读取导致无法启动的问题。安装包验证完成后再发布。"
+          fi
+          if ! gh api "repos/$GH_REPO/git/ref/heads/transport/pocket-20347" >/dev/null 2>&1; then
+            gh api --method POST "repos/$GH_REPO/git/refs" -f ref=refs/heads/transport/pocket-20347 -f sha="$HEAD_SHA" >/dev/null
+          fi
