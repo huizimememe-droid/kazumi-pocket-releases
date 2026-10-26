@@ -1,0 +1,21 @@
+name: Prepare fusion 20343
+on:
+  push:
+    paths:
+      - .github/workflows/prepare-20343.yml
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create draft only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view pocket-20343 >/dev/null 2>&1; then
+            echo "Release already exists; leaving it unchanged."
+            exit 0
+          fi
+          gh release create pocket-20343 --draft --title "Kazumi 融合版 2.4.2 · 20343" --notes "合入官方2.4.2规则仓库访问修复及多镜像选择，共享ECH网络连接。保留影视、篮球、B站、公开弹幕、续播、线路记忆、下载及融合版独立更新。影视超分尚未加入。"
