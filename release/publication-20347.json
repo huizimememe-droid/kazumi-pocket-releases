@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "name": "KazumiPocket-2.4.2-startup-hotfix.apk",
+      "size": 33759331,
+      "sha256": "81d9bcde4b8182e3840e190259bce09e3f653d7412dd5877375b2d427e33fa04",
+      "parts": [
+        "payload/20347/apk-000.part",
+        "payload/20347/apk-001.part",
+        "payload/20347/apk-002.part",
+        "payload/20347/apk-003.part",
+        "payload/20347/apk-004.part",
+        "payload/20347/apk-005.part",
+        "payload/20347/apk-006.part",
+        "payload/20347/apk-007.part",
+        "payload/20347/apk-008.part"
+      ]
+    },
+    {
+      "name": "KazumiPocket-2.4.2-startup-hotfix-source.zip",
+      "size": 25989336,
+      "sha256": "fe70b4e39263c7fdac42b9eac8a3afe7015008d072bdf795803066fa2f2a8bc0",
+      "parts": [
+        "payload/20347/source-000.part",
+        "payload/20347/source-001.part",
+        "payload/20347/source-002.part",
+        "payload/20347/source-003.part",
+        "payload/20347/source-004.part",
+        "payload/20347/source-005.part",
+        "payload/20347/source-006.part"
+      ]
+    }
+  ],
+  "update": {
+    "schemaVersion": 1,
+    "channel": "kazumi-pocket",
+    "packageId": "com.predidit.kazumi.pocket",
+    "version": "2.4.2",
+    "buildNumber": 20347,
+    "upstreamVersion": "2.4.2",
+    "publishedAt": "2026-10-26T09:30:26.735Z",
+    "notes": "融合版 2.4.2+20347 · 启动修复\n\n20346 已撤回稳定更新：它在 Hive / GStorage.init 完成前读取画质设置，设置的 late 字段尚未初始化，异常发生在 Future 创建之前，原来的 catchError 无法捕获，导致应用无法进入首页。\n\n- 将影视播放器桥接注册移到设置存储成功初始化之后。\n- 画质偏好迁移的读取与通道调用全部放入异步 try 保护，同步或异步失败均不阻止首页启动。\n- 不清理或重建用户数据；保留影视播放器整合、画质记忆、切集及流畅保护。设置标题更新为20347。\n\n20346 打不开时无法在软件内检查更新，请直接下载本版 APK 覆盖安装，不要先卸载或清除应用数据。包名、签名保持一致，buildNumber 升至20347。\n\n验证：15项启动顺序与异常隔离检查通过；同一顺序检查对20346真实 main.dart 按预期失败。原140项播放/会话/画质/集成检查重新通过，静态分析无错误或警告。该启动验证是源代码入口顺序与迁移逻辑回归检查，尚未进行荣耀Magic7真机冷启动测试。\n\n完整对应源码见附件，沿用 Kazumi GPL-3.0、FSRCNNX LGPL-3.0-or-later、CAS MIT 与其他第三方许可证。",
+    "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20347/KazumiPocket-2.4.2-startup-hotfix.apk",
+    "sha256": "81d9bcde4b8182e3840e190259bce09e3f653d7412dd5877375b2d427e33fa04",
+    "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20347"
+  },
+  "notes": "融合版 2.4.2+20347 · 启动修复\n\n20346 已撤回稳定更新：它在 Hive / GStorage.init 完成前读取画质设置，设置的 late 字段尚未初始化，异常发生在 Future 创建之前，原来的 catchError 无法捕获，导致应用无法进入首页。\n\n- 将影视播放器桥接注册移到设置存储成功初始化之后。\n- 画质偏好迁移的读取与通道调用全部放入异步 try 保护，同步或异步失败均不阻止首页启动。\n- 不清理或重建用户数据；保留影视播放器整合、画质记忆、切集及流畅保护。设置标题更新为20347。\n\n20346 打不开时无法在软件内检查更新，请直接下载本版 APK 覆盖安装，不要先卸载或清除应用数据。包名、签名保持一致，buildNumber 升至20347。\n\n验证：15项启动顺序与异常隔离检查通过；同一顺序检查对20346真实 main.dart 按预期失败。原140项播放/会话/画质/集成检查重新通过，静态分析无错误或警告。该启动验证是源代码入口顺序与迁移逻辑回归检查，尚未进行荣耀Magic7真机冷启动测试。\n\n完整对应源码见附件，沿用 Kazumi GPL-3.0、FSRCNNX LGPL-3.0-or-later、CAS MIT 与其他第三方许可证。"
+}
