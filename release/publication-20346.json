@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "name": "KazumiPocket-2.4.2-cinema-integrated.apk",
+      "size": 33757907,
+      "sha256": "e6859e9d864dfc2f1dfb2b5a7dc0bcddbf59decd8e817d2a1865b1956534745d",
+      "parts": [
+        "payload/20346/apk-000.part",
+        "payload/20346/apk-001.part",
+        "payload/20346/apk-002.part",
+        "payload/20346/apk-003.part",
+        "payload/20346/apk-004.part",
+        "payload/20346/apk-005.part",
+        "payload/20346/apk-006.part",
+        "payload/20346/apk-007.part",
+        "payload/20346/apk-008.part"
+      ]
+    },
+    {
+      "name": "KazumiPocket-2.4.2-cinema-integrated-source.zip",
+      "size": 25987356,
+      "sha256": "e469ecf0872a7b0d3cf3572fa58b220812e4b4e71b6a6f66c31bc9bccda66528",
+      "parts": [
+        "payload/20346/source-000.part",
+        "payload/20346/source-001.part",
+        "payload/20346/source-002.part",
+        "payload/20346/source-003.part",
+        "payload/20346/source-004.part",
+        "payload/20346/source-005.part",
+        "payload/20346/source-006.part"
+      ]
+    }
+  ],
+  "update": {
+    "schemaVersion": 1,
+    "channel": "kazumi-pocket",
+    "packageId": "com.predidit.kazumi.pocket",
+    "version": "2.4.2",
+    "buildNumber": 20346,
+    "upstreamVersion": "2.4.2",
+    "publishedAt": "2026-10-26T09:03:08.444Z",
+    "notes": "融合版 2.4.2+20346 · 影视播放器整合与流畅保护\n\n- 画质选项直接列出“真人增强 / 真人神经超分 / Anime4K”，设置标题显示20346，避免混淆旧版三档菜单。\n- 自动记住画质选择。播放影片时直接按偏好启动，不再先准备普通播放器再手动切MPV；迁移20345已保存的画质选择。首次未设置时采用轻量真人增强。\n- MPV中新增选集、线路、下一集和完播连播；切集复用同一个播放器与画面，不返回另一个播放界面。同一集切线路保留进度。\n- 播放会话修订号防止上一集的延迟进度覆盖下一集。返回影视选集不重新准备另一个解码器，保留“使用普通播放器”回退。\n- 神经模式的CAS锐化移到适配屏幕后处理，避免在内部4K图像上重复锐化。\n- 新增持续掉帧保护：预热、暂停、已知缓冲及拖动进度时跳过；若持续掉帧，本次观看改用轻量真人增强，显示原因，保留原神经超分偏好。\n\n用法：直接进入影视观看，点右上角画质设置，选一次“真人神经超分”，后续播放和下一集自动使用。底部有选集和下一集，也可暂停对比同帧原图。神经超分仍限1080p及以下SDR；HDR或更高分辨率保留原画。\n\n真人影视的清晰度收益可能小于动画。压缩丢失的纹理不能可靠恢复，神经模式也不保证比原画更好；持续卡顿时建议真人增强。\n\n140项当前状态/会话/画质/集成检查通过，静态分析与全量原生Java编译通过。Windows MPV实际验证14个神经阶段及缩放后CAS顺序。安装包同签名可覆盖升级；尚未进行荣耀Magic7真机跨界面与连续播放实测，不承诺手机帧率。\n\n基于Kazumi GPL-3.0，完整对应源码见附件。FSRCNNX LGPL-3.0-or-later、CAS MIT及其他许可证均包含。",
+    "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20346/KazumiPocket-2.4.2-cinema-integrated.apk",
+    "sha256": "e6859e9d864dfc2f1dfb2b5a7dc0bcddbf59decd8e817d2a1865b1956534745d",
+    "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20346"
+  },
+  "notes": "融合版 2.4.2+20346 · 影视播放器整合与流畅保护\n\n- 画质选项直接列出“真人增强 / 真人神经超分 / Anime4K”，设置标题显示20346，避免混淆旧版三档菜单。\n- 自动记住画质选择。播放影片时直接按偏好启动，不再先准备普通播放器再手动切MPV；迁移20345已保存的画质选择。首次未设置时采用轻量真人增强。\n- MPV中新增选集、线路、下一集和完播连播；切集复用同一个播放器与画面，不返回另一个播放界面。同一集切线路保留进度。\n- 播放会话修订号防止上一集的延迟进度覆盖下一集。返回影视选集不重新准备另一个解码器，保留“使用普通播放器”回退。\n- 神经模式的CAS锐化移到适配屏幕后处理，避免在内部4K图像上重复锐化。\n- 新增持续掉帧保护：预热、暂停、已知缓冲及拖动进度时跳过；若持续掉帧，本次观看改用轻量真人增强，显示原因，保留原神经超分偏好。\n\n用法：直接进入影视观看，点右上角画质设置，选一次“真人神经超分”，后续播放和下一集自动使用。底部有选集和下一集，也可暂停对比同帧原图。神经超分仍限1080p及以下SDR；HDR或更高分辨率保留原画。\n\n真人影视的清晰度收益可能小于动画。压缩丢失的纹理不能可靠恢复，神经模式也不保证比原画更好；持续卡顿时建议真人增强。\n\n140项当前状态/会话/画质/集成检查通过，静态分析与全量原生Java编译通过。Windows MPV实际验证14个神经阶段及缩放后CAS顺序。安装包同签名可覆盖升级；尚未进行荣耀Magic7真机跨界面与连续播放实测，不承诺手机帧率。\n\n基于Kazumi GPL-3.0，完整对应源码见附件。FSRCNNX LGPL-3.0-or-later、CAS MIT及其他许可证均包含。"
+}
