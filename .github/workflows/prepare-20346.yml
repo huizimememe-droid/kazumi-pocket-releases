@@ -1,0 +1,24 @@
+name: Prepare cinema enhancement 20346
+on:
+  push:
+    paths:
+      - .github/workflows/prepare-20346.yml
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create draft and temporary artifact transport branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if ! gh release view pocket-20346 >/dev/null 2>&1; then
+            gh release create pocket-20346 --draft --title "Kazumi 融合版 2.4.2 · 20346 影视播放器整合" --notes "记住画质选择，自动进入、复用播放器切集，加入持续掉帧保护。安装包验证完成后再发布。"
+          fi
+          if ! gh api "repos/$GH_REPO/git/ref/heads/transport/pocket-20346" >/dev/null 2>&1; then
+            gh api --method POST "repos/$GH_REPO/git/refs" -f ref=refs/heads/transport/pocket-20346 -f sha="$HEAD_SHA" >/dev/null
+          fi
