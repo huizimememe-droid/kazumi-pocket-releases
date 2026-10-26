@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "name": "KazumiPocket-2.4.2-fusion.apk",
+      "size": 33644535,
+      "sha256": "62783b42f3c42045bc1fef6fa2e72800ac99bb5da03e58d7f07e3f3b7aa5d574",
+      "parts": [
+        "payload/20343/apk-000.part",
+        "payload/20343/apk-001.part",
+        "payload/20343/apk-002.part",
+        "payload/20343/apk-003.part",
+        "payload/20343/apk-004.part",
+        "payload/20343/apk-005.part",
+        "payload/20343/apk-006.part",
+        "payload/20343/apk-007.part",
+        "payload/20343/apk-008.part"
+      ]
+    },
+    {
+      "name": "KazumiPocket-2.4.2-fusion-source.zip",
+      "size": 25913739,
+      "sha256": "2dc088ddd2ebe86390e79bbd5d6a84d9560ddc7e7f3fae0173a4b0f8128554ef",
+      "parts": [
+        "payload/20343/source-000.part",
+        "payload/20343/source-001.part",
+        "payload/20343/source-002.part",
+        "payload/20343/source-003.part",
+        "payload/20343/source-004.part",
+        "payload/20343/source-005.part",
+        "payload/20343/source-006.part"
+      ]
+    }
+  ],
+  "update": {
+    "schemaVersion": 1,
+    "channel": "kazumi-pocket",
+    "packageId": "com.predidit.kazumi.pocket",
+    "version": "2.4.2",
+    "buildNumber": 20343,
+    "upstreamVersion": "2.4.2",
+    "publishedAt": "2026-10-26T03:54:56.982Z",
+    "notes": "融合版2.4.2+20343\n\n- 合入官方2.4.2：修复部分地区规则仓库无法访问，新增gh-proxy、ghfast、GitCode及直连选择。\n- 合入官方共享ECH网络连接池，保留融合版番剧搜索逐路回退和鉴权隔离。\n- 保留影视、篮球、B站、公开弹幕及本地导入、续播、线路记忆、下载与独立更新。\n- 回归检查通过，安装包签名与现有融合版一致；未进行安卓真机测试。\n\n直接覆盖安装，请不要先卸载。开启自动检查更新后，启动时检查；也可在关于页面手动检查更新。影视超分辨率尚未加入，将单独改造。\n\n基于Kazumi，GPL-3.0，对应完整源码见附件。公开弹幕映射来自bangumi-data（CC BY 4.0），署名及许可证已包含。",
+    "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20343/KazumiPocket-2.4.2-fusion.apk",
+    "sha256": "62783b42f3c42045bc1fef6fa2e72800ac99bb5da03e58d7f07e3f3b7aa5d574",
+    "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20343"
+  },
+  "notes": "融合版2.4.2+20343\n\n- 合入官方2.4.2：修复部分地区规则仓库无法访问，新增gh-proxy、ghfast、GitCode及直连选择。\n- 合入官方共享ECH网络连接池，保留融合版番剧搜索逐路回退和鉴权隔离。\n- 保留影视、篮球、B站、公开弹幕及本地导入、续播、线路记忆、下载与独立更新。\n- 回归检查通过，安装包签名与现有融合版一致；未进行安卓真机测试。\n\n直接覆盖安装，请不要先卸载。开启自动检查更新后，启动时检查；也可在关于页面手动检查更新。影视超分辨率尚未加入，将单独改造。\n\n基于Kazumi，GPL-3.0，对应完整源码见附件。公开弹幕映射来自bangumi-data（CC BY 4.0），署名及许可证已包含。"
+}
