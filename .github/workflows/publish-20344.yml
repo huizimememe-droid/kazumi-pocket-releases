@@ -1,0 +1,20 @@
+name: Publish verified fusion 20344
+on:
+  push:
+    paths:
+      - release/publication-20344.json
+permissions:
+  contents: write
+concurrency:
+  group: fusion-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/transport/pocket-20344'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Assemble signed artifacts, verify, publish and check public manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 release/publish_20344.py

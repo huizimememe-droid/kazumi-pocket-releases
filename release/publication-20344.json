@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "name": "KazumiPocket-2.4.2-cinema-super-resolution.apk",
+      "size": 33694575,
+      "sha256": "5aef813c6f6a4a6262c296ce341cb89846d0ab20b2d9566b53b58ea2e60f556d",
+      "parts": [
+        "payload/20344/apk-000.part",
+        "payload/20344/apk-001.part",
+        "payload/20344/apk-002.part",
+        "payload/20344/apk-003.part",
+        "payload/20344/apk-004.part",
+        "payload/20344/apk-005.part",
+        "payload/20344/apk-006.part",
+        "payload/20344/apk-007.part",
+        "payload/20344/apk-008.part"
+      ]
+    },
+    {
+      "name": "KazumiPocket-2.4.2-cinema-super-resolution-source.zip",
+      "size": 25928217,
+      "sha256": "07616fdcb1d477c05e8ba1d8ce37b646634d7ef5a47810342fbc88d95646acc4",
+      "parts": [
+        "payload/20344/source-000.part",
+        "payload/20344/source-001.part",
+        "payload/20344/source-002.part",
+        "payload/20344/source-003.part",
+        "payload/20344/source-004.part",
+        "payload/20344/source-005.part",
+        "payload/20344/source-006.part"
+      ]
+    }
+  ],
+  "update": {
+    "schemaVersion": 1,
+    "channel": "kazumi-pocket",
+    "packageId": "com.predidit.kazumi.pocket",
+    "version": "2.4.2",
+    "buildNumber": 20344,
+    "upstreamVersion": "2.4.2",
+    "publishedAt": "2026-10-26T06:37:33.203Z",
+    "notes": "融合版2.4.2+20344\n\n- 包含官方2.4.2规则仓库访问修复、多镜像选择和共享ECH连接池。\n- 影视播放设置新增“超分辨率 · MPV”，复用番剧的MPV和Anime4K，关闭/效率/质量三档独立记忆；原播放器默认保持不变。\n- 手动切换时保留观看进度、倍速及亮度；关闭超分页后释放MPV，恢复原播放器和选集页。避免两个硬解码器同时占用，进度每5秒回传。\n- 控制层自动隐藏，支持横屏全屏、拖动定位、音量亮度手势；防止加载未完成时切到后台后自行播放。\n- 保留影视、篮球、B站、公开弹幕、追剧、续播、线路记忆、下载和独立更新。\n\n用法：影视播放正常后，播放设置 → 超分辨率 · MPV；超分页右上角可选择效率或质量档。Anime4K偏向动画，真人画面效果和流畅度取决于片源与机型，不能把低清变为原生4K。网页/B站/篮球不覆盖此入口。返回原播放器会重新准备视频，请勿期待无等待切换。\n\n新增43项会话、进度及后台加载检查，原生编译和静态分析通过；未变更的既有回归用源码逐字节核对后复用。安装包签名匹配；尚未进行安卓真机GPU与跨界面操作测试。直接覆盖安装，不要先卸载。\n\n基于Kazumi（GPL-3.0），对应完整源码见附件。Anime4K和其他依赖沿用原许可证；弹幕映射来自bangumi-data（CC BY 4.0），署名许可证已包含。",
+    "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20344/KazumiPocket-2.4.2-cinema-super-resolution.apk",
+    "sha256": "5aef813c6f6a4a6262c296ce341cb89846d0ab20b2d9566b53b58ea2e60f556d",
+    "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20344"
+  },
+  "notes": "融合版2.4.2+20344\n\n- 包含官方2.4.2规则仓库访问修复、多镜像选择和共享ECH连接池。\n- 影视播放设置新增“超分辨率 · MPV”，复用番剧的MPV和Anime4K，关闭/效率/质量三档独立记忆；原播放器默认保持不变。\n- 手动切换时保留观看进度、倍速及亮度；关闭超分页后释放MPV，恢复原播放器和选集页。避免两个硬解码器同时占用，进度每5秒回传。\n- 控制层自动隐藏，支持横屏全屏、拖动定位、音量亮度手势；防止加载未完成时切到后台后自行播放。\n- 保留影视、篮球、B站、公开弹幕、追剧、续播、线路记忆、下载和独立更新。\n\n用法：影视播放正常后，播放设置 → 超分辨率 · MPV；超分页右上角可选择效率或质量档。Anime4K偏向动画，真人画面效果和流畅度取决于片源与机型，不能把低清变为原生4K。网页/B站/篮球不覆盖此入口。返回原播放器会重新准备视频，请勿期待无等待切换。\n\n新增43项会话、进度及后台加载检查，原生编译和静态分析通过；未变更的既有回归用源码逐字节核对后复用。安装包签名匹配；尚未进行安卓真机GPU与跨界面操作测试。直接覆盖安装，不要先卸载。\n\n基于Kazumi（GPL-3.0），对应完整源码见附件。Anime4K和其他依赖沿用原许可证；弹幕映射来自bangumi-data（CC BY 4.0），署名许可证已包含。"
+}
