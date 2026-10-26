@@ -1,0 +1,24 @@
+name: Prepare cinema enhancement 20345
+on:
+  push:
+    paths:
+      - .github/workflows/prepare-20345.yml
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create draft and temporary artifact transport branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if ! gh release view pocket-20345 >/dev/null 2>&1; then
+            gh release create pocket-20345 --draft --title "Kazumi 融合版 2.4.2 · 20345 真人画质增强" --notes "加入真人 CAS、FSRCNNX 神经超分、同帧原图对比及实际渲染验证。安装包验证完成后再发布。"
+          fi
+          if ! gh api "repos/$GH_REPO/git/ref/heads/transport/pocket-20345" >/dev/null 2>&1; then
+            gh api --method POST "repos/$GH_REPO/git/refs" -f ref=refs/heads/transport/pocket-20345 -f sha="$HEAD_SHA" >/dev/null
+          fi
