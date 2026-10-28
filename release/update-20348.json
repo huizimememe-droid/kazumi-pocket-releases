@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "channel": "kazumi-pocket",
+  "packageId": "com.predidit.kazumi.pocket",
+  "version": "2.4.2",
+  "buildNumber": 20348,
+  "upstreamVersion": "2.4.2",
+  "publishedAt": "2026-10-28T09:39:35.375Z",
+  "notes": "融合版 2.4.2+20348 · NBA 历史录像与轻量播放\n\n- 篮球模块新增 NBA 历史录像：61 场、166 段公开录像，包含经典比赛及 2023-2024、2024-2025、2025-2026、2026-2027 等赛季的精选全场。按球队搜索、赛季筛选，支持分节连续播放和继续观看。目录本地加载，返回保留浏览位置，手动刷新才更新目录。\n- 仅接入央视公开、非试看且未受保护的录像；点击时重新检查可用权限，无登录、订阅入口。公开源可能失效，清晰度显示实际视频尺寸，不将集锦当全场。\n- 移除影视画质增强、真人神经超分和专用着色器，保留标准播放、选集、线路、倍速、手势与续播。\n- 影视播放及切集不再等待额外的 HLS 清晰度探测，由播放器读取播放清单；番剧静态直取探测上限从 2200ms 缩至 650ms，未命中回退网页解析。\n- Android 在线播放器缓存上限调整为 32MiB，采用有界前向缓冲，缩短缓冲暂停等待；保留低内存模式和番剧原有超分设置。\n\n验证：全部 166 段播放清单可访问；抽测 2016、2020、2024、2025、2026 五场成功解码首帧。140 项录像策略/目录/实际 HTTPS 检查、32 项实际播放器桥接检查、启动/解析/取消/HLS复用/续播/更新回归通过，静态分析无错误或警告。尚未连接荣耀 Magic7 进行真机冷启动与速度对比，实际加载仍受片源和网络影响。\n\n保持原融合版包名和签名，可直接覆盖升级。应用内更新由本仓库维护。完整对应源码随附，遵循 Kazumi GPL-3.0 及保留的第三方许可证。",
+  "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20348/KazumiPocket-2.4.2-light-playback-nba.apk",
+  "sha256": "154a174a32a3966580a964ce13fd9d0153908fdce706ad0a38d949641e2aa3e9",
+  "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20348"
+}
