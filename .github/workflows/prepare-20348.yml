@@ -1,0 +1,24 @@
+name: Prepare fusion NBA replay 20348
+on:
+  push:
+    paths:
+      - .github/workflows/prepare-20348.yml
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create draft and temporary artifact transport branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if ! gh release view pocket-20348 >/dev/null 2>&1; then
+            gh release create pocket-20348 --draft --title "Kazumi 融合版 2.4.2 · 20348 NBA录像与轻量播放" --notes "正在验证新版安装包，验证完成后发布。"
+          fi
+          if ! gh api "repos/$GH_REPO/git/ref/heads/transport/pocket-20348" >/dev/null 2>&1; then
+            gh api --method POST "repos/$GH_REPO/git/refs" -f ref=refs/heads/transport/pocket-20348 -f sha="$HEAD_SHA" >/dev/null
+          fi
