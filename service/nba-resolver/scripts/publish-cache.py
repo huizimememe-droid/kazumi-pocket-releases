@@ -12,7 +12,7 @@ for mid,item in data['videos'].items():
  assert item['formats']
  for f in item['formats']:
   u=urllib.parse.urlparse(f['url'])
-  assert f['height'] in (720,1080) and u.scheme=='https' and not u.username and not u.password and (u.hostname.endswith('.okcdn.ru') or u.hostname.endswith('.mycdn.me'))
+  assert f['height'] in (720,1080) and u.scheme=='https' and not u.username and not u.password and (u.hostname.endswith('.okcdn.ru') or u.hostname.endswith('.mycdn.me') or u.hostname.endswith('.vkuser.net'))
 endpoint='https://api.github.com/repos/'+repo+'/contents/data/nba-hd.json'
 headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'PocketReplay-Cache'}
 sha=None

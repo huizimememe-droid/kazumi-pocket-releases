@@ -1,2 +1,2 @@
-// Only games verified with ffprobe and strict decoding are enabled here.
-export const verifiedIds = new Set(['10179955657302']);
+// Full-game IDs checked with ffprobe, strict decoding, seeking and local playback.
+export const verifiedIds = new Set(['10179955657302','10071262169656','15464539884088']);

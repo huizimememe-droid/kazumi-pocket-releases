@@ -30,7 +30,7 @@ export function publicFormats(data, id, now = Date.now()) {
     let url;
     try { url = new URL(v.url); } catch { continue; }
     if (url.protocol !== 'https:' || url.username || url.password ||
-        !/(^|\.)(okcdn\.ru|mycdn\.me)$/.test(url.hostname)) continue;
+        !/(^|\.)(okcdn\.ru|mycdn\.me|vkuser\.net)$/.test(url.hostname)) continue;
     const expiration = Number(url.searchParams.get('expires'));
     if (expiration > 0) {
       const ms = expiration < 1e12 ? expiration * 1000 : expiration;

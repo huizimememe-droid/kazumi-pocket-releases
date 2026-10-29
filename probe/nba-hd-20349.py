@@ -78,7 +78,7 @@ def inspect_archive(identifier):
   except Exception as e:errors.append({'file':f['name'],'error':str(e)})
  raise ValueError(json.dumps(errors)if files else 'no public media files')
 report['archivePassed']=[]
-for aid in ['nba.-2014.-rd-1.-gm-2.-bobcats.vs.-heat.-720p','nba-20241113-min-por-1080p-50-katu-5-sport','nba.-2015.06.04.-cavaliers.vs.-warriors.-720p.-hdtv.-30fps.x-264-reborn-4-hd']:
+for aid in ["kawhi-hits-series-ending-buzzer-beater-in-game-7-nbatogether-live-classic-game-n","NBARS2018SanAntonioSpursVsOklahomaCityThunder1003720p001","nba-rs-2023-toronto-raptors-vs-golden-state-warriors-27-01-720p-en-60fps-nbcsba","nba-20240106-nyk-was-1080p-50-monumental-5-sport"]:
  try:report['archivePassed'].append(inspect_archive(aid))
  except Exception as e:report.setdefault('archiveMediaErrors',[]).append({'id':aid,'error':str(e)})
 
