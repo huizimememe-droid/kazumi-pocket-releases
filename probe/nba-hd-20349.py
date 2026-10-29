@@ -58,10 +58,7 @@ def inspect_archive(identifier):
  if meta.get('is_dark') or str(meta.get('metadata',{}).get('access-restricted-item','')).lower()=='true':raise ValueError('restricted archive item')
  host=meta.get('d1','')
  if not re.fullmatch(r'ia\d+\.us\.archive\.org',host):raise ValueError('unknown public archive server')
- files=[f for f in meta.get('files',[])if re.search(r'\.(mp4|mkv)os.makedirs('probe-results',exist_ok=True)
-open('probe-results/report.json','w').write(json.dumps(report,ensure_ascii=False,indent=2))
-print('HD_PROBE_REPORT='+json.dumps(report,ensure_ascii=False),flush=True)
-,f.get('name',''),re.I)and not f.get('private')]
+ files=[f for f in meta.get('files',[])if re.search(r'\.(mp4|mkv)$',f.get('name',''),re.I)and not f.get('private')]
  files.sort(key=lambda f:(f.get('source')=='original',int(f.get('size',0))),reverse=True)
  errors=[]
  for f in files[:3]:
