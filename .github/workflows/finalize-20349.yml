@@ -1,0 +1,20 @@
+name: Finalize verified fusion release 20349
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/finalize-20349.yml']
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: github.repository == 'huizimememe-droid/kazumi-pocket-releases'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Verify assets, finish metadata upload and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 releases/finalize-20349.py

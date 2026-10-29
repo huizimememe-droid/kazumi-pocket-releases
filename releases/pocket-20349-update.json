@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "channel": "kazumi-pocket",
+  "packageId": "com.predidit.kazumi.pocket",
+  "version": "2.4.2",
+  "buildNumber": 20349,
+  "upstreamVersion": "2.4.2",
+  "publishedAt": "2026-10-29T03:59:45.100Z",
+  "notes": "融合版 2.4.2+20349 · NBA 高清全场\n\n- 移除旧 270p 默认回放，收录 7 场实测高清全场：3 场 1080p、4 场 720p，覆盖 2015 经典总决赛及 2023—2026 年比赛。\n- 默认优先 1080p，可记住 720p 优先选择；播放器检查实际尺寸，低于 720p 会停止，不假标高清。\n- 返回保留目录与续播，切换分段和清晰度保持全屏；公开地址自动续期，免登录订阅。\n- 海外高清原档已标注，需要能访问该站点的 VPN，网络不可达时会快速提示。\n\n保持原融合版包名与签名，可直接覆盖升级。完整对应源码随版本附带。",
+  "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20349/KazumiPocket-2.4.2-nba-hd.apk",
+  "sha256": "b6ffe280e3dd25e9d376ea87bb7c2ec170e9b138bda9c77423498fd58f75a1e8",
+  "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20349"
+}
