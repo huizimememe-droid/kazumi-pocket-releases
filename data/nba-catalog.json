@@ -1,0 +1,179 @@
+{
+  "schema": 2,
+  "minimumHeight": 720,
+  "preferredHeight": 1080,
+  "verifiedAt": "2026-10-29",
+  "games": [
+    {
+      "id": "ok-15464539884088",
+      "title": "2026 总决赛 G5｜尼克斯 vs 马刺",
+      "date": "2026-06-13",
+      "season": "2025-2026",
+      "provider": "ok",
+      "seconds": 9960,
+      "qualityHeight": 720,
+      "qualityWidth": 1280,
+      "fps": "1612959385/26909563",
+      "bitrate": 3770207,
+      "sourcePage": "https://basketball-video.com/new-york-knicks-vs-san-antonio-spurs-nba-finals-game-5-full-game-replays-june-13-2026",
+      "verifiedAt": "2026-10-29",
+      "parts": [
+        {
+          "label": "全场",
+          "seconds": 9960,
+          "videoId": "15464539884088"
+        }
+      ]
+    },
+    {
+      "id": "ok-10179955657302",
+      "title": "2025 总决赛 G7｜步行者 vs 雷霆",
+      "date": "2025-06-22",
+      "season": "2024-2025",
+      "provider": "ok",
+      "seconds": 9234,
+      "qualityHeight": 1080,
+      "qualityWidth": 1920,
+      "fps": "2066229813/34471684",
+      "bitrate": 7392438,
+      "sourcePage": "https://basketball-video.com/indiana-pacers-vs-oklahoma-city-thunder-game-7-full-game-replay-june-22-2025-nba-finalss--",
+      "verifiedAt": "2026-10-29",
+      "parts": [
+        {
+          "label": "全场",
+          "seconds": 9234,
+          "videoId": "10179955657302"
+        }
+      ]
+    },
+    {
+      "id": "ok-10071262169656",
+      "title": "2025 总决赛 G5｜步行者 vs 雷霆",
+      "date": "2025-06-16",
+      "season": "2024-2025",
+      "provider": "ok",
+      "seconds": 7274,
+      "qualityHeight": 720,
+      "qualityWidth": 1280,
+      "fps": "1043943787/17689624",
+      "bitrate": 3701860,
+      "sourcePage": "https://basketball-video.com/indiana-pacers-vs-oklahoma-city-thunder-game-5-full-game-replay-june-16-2025-nba-finalss--",
+      "verifiedAt": "2026-10-29",
+      "parts": [
+        {
+          "label": "全场",
+          "seconds": 7274,
+          "videoId": "10071262169656"
+        }
+      ]
+    },
+    {
+      "id": "archive-min-por-20241113",
+      "title": "2024 常规赛｜森林狼 vs 开拓者",
+      "date": "2024-11-13",
+      "season": "2024-2025",
+      "provider": "archive",
+      "seconds": 7416,
+      "qualityHeight": 1080,
+      "qualityWidth": 1920,
+      "fps": "1437595579/28751997",
+      "bitrate": 5067055,
+      "sourcePage": "https://archive.org/details/nba-20241113-min-por-1080p-50-katu-5-sport",
+      "verifiedAt": "2026-10-29",
+      "parts": [
+        {
+          "label": "全场",
+          "seconds": 7416,
+          "formats": [
+            {
+              "height": 1080,
+              "width": 1920,
+              "url": "https://ia600707.us.archive.org/16/items/nba-20241113-min-por-1080p-50-katu-5-sport/NBA_20241113_MIN%20%40%20POR_1080p50_KATU_5SPORT.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "archive-nyk-was-20240106",
+      "title": "2024 常规赛｜尼克斯 vs 奇才",
+      "date": "2024-01-06",
+      "season": "2023-2024",
+      "provider": "archive",
+      "seconds": 6275,
+      "qualityHeight": 1080,
+      "qualityWidth": 1920,
+      "fps": "7843825/156876",
+      "bitrate": 5109123,
+      "sourcePage": "https://archive.org/details/nba-20240106-nyk-was-1080p-50-monumental-5-sport",
+      "verifiedAt": "2026-10-29",
+      "parts": [
+        {
+          "label": "全场",
+          "seconds": 6275,
+          "formats": [
+            {
+              "height": 1080,
+              "width": 1920,
+              "url": "https://ia903108.us.archive.org/6/items/nba-20240106-nyk-was-1080p-50-monumental-5-sport/NBA_20240106_NYK%20%40%20WAS_1080p50_Monumental_5SPORT.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "archive-tor-gsw-20230127",
+      "title": "2023 常规赛｜猛龙 vs 勇士",
+      "date": "2023-01-27",
+      "season": "2022-2023",
+      "provider": "archive",
+      "seconds": 5321,
+      "qualityHeight": 720,
+      "qualityWidth": 1280,
+      "fps": "19001/317",
+      "bitrate": 6650192,
+      "sourcePage": "https://archive.org/details/nba-rs-2023-toronto-raptors-vs-golden-state-warriors-27-01-720p-en-60fps-nbcsba",
+      "verifiedAt": "2026-10-29",
+      "parts": [
+        {
+          "label": "全场",
+          "seconds": 5321,
+          "formats": [
+            {
+              "height": 720,
+              "width": 1280,
+              "url": "https://dn600303.us.archive.org/0/items/nba-rs-2023-toronto-raptors-vs-golden-state-warriors-27-01-720p-en-60fps-nbcsba/NBA%20RS%202023%20Toronto%20Raptors%20vs%20Golden%20State%20Warriors%2027%2001%20720pEN60fps%20NBCSBA.mkv"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "archive-finals-2015-g1",
+      "title": "2015 总决赛 G1｜骑士 vs 勇士",
+      "date": "2015-06-04",
+      "season": "2014-2015",
+      "provider": "archive",
+      "seconds": 10506,
+      "qualityHeight": 720,
+      "qualityWidth": 1280,
+      "fps": "30000/1001",
+      "bitrate": 2945783,
+      "sourcePage": "https://archive.org/details/nba.-2015.06.04.-cavaliers.vs.-warriors.-720p.-hdtv.-30fps.x-264-reborn-4-hd",
+      "verifiedAt": "2026-10-29",
+      "parts": [
+        {
+          "label": "全场",
+          "seconds": 10506,
+          "formats": [
+            {
+              "height": 720,
+              "width": 1280,
+              "url": "https://dn600300.us.archive.org/0/items/nba.-2015.06.04.-cavaliers.vs.-warriors.-720p.-hdtv.-30fps.x-264-reborn-4-hd/NBA.2015.06.04.Cavaliers.vs.Warriors.720p.HDTV.30fps.x264-Reborn4HD.mkv"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

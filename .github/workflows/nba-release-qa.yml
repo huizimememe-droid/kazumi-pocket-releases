@@ -1,0 +1,24 @@
+name: Verify HD catalogue before release
+on:
+  push:
+    paths: ['probe/nba-release-qa.py', '.github/workflows/nba-release-qa.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Video probe tools
+        run: command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y ffmpeg)
+      - name: Verify public TLS and native-compatible media headers
+        run: python3 probe/nba-release-qa.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: nba-hd-20349-qa
+          path: probe-results/
+          retention-days: 7
