@@ -1,0 +1,32 @@
+name: Refresh public NBA HD addresses
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['service/nba-resolver/**', '.github/workflows/refresh-nba-hd.yml']
+  schedule:
+    - cron: '17 */2 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: nba-public-metadata
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.repository == 'huizimememe-droid/kazumi-pocket-releases' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Validate public resolver
+        run: node --test service/nba-resolver/test/*.test.mjs
+      - name: Refresh anonymous playback metadata
+        run: node service/nba-resolver/scripts/refresh.mjs
+      - name: Publish only the validated metadata file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 service/nba-resolver/scripts/publish-cache.py

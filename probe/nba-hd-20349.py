@@ -38,12 +38,16 @@ def inspect_ok(url):
    actual=float(info['format'].get('duration',0))
    if video.get('height',0)<720 or actual<1800 or actual<duration*.9:raise ValueError('low quality or truncated')
    for point in [30,int(actual/2),max(30,int(actual)-120)]:
-    result=subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-xerror','-err_detect','explode','-rw_timeout','10000000','-ss',str(point),'-i',stream,'-t','3','-map','0:v:0','-map','0:a:0?','-f','null','-'],capture_output=True,text=True,timeout=30)
+    result=subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-xerror','-err_detect','explode','-rw_timeout','10000000','-ss',str(point),'-i',stream,'-t','3','-map','0:v:0','-map','0:a:0?','-fps_mode:v','passthrough','-enc_time_base:v','1:1000000','-f','null','-'],capture_output=True,text=True,timeout=30)
     if result.returncode or result.stderr.strip():raise ValueError('decode/seek failed: '+result.stderr[-500:])
    return {'id':vid,'provider':'ok.ru','page':url,'title':movie.get('title'),'seconds':actual,'width':video['width'],'height':video['height'],'fps':video.get('avg_frame_rate'),'bitrate':info['format'].get('bit_rate'),'stream':stream,'format':fmt.get('name'),'anonymous':True,'strictDecodeAndThreeSeeks':True}
   except Exception as e:checks.append({'format':fmt.get('name'),'error':str(e)})
  raise ValueError(json.dumps(checks) if checks else 'no anonymous HD format')
 report={'tested':[],'passed':[],'started':time.time()};queue=['https://ok.ru/videoembed/10071262169656']
+try:
+ q=urllib.parse.urlencode({'q':'title:NBA AND mediatype:movies AND (720p OR 1080p)','output':'json','rows':'12','fl[]':['identifier','title']},doseq=True)
+ report['archiveCandidates']=json.loads(get('https://archive.org/advancedsearch.php?'+q)).get('response',{}).get('docs',[])
+except Exception as e:report['archiveError']=str(e)
 for url in dict.fromkeys(queue):
  try:
   result=inspect_ok(url);report['passed'].append(result);report['tested'].append({'url':url,'passed':True})

@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {metadataFromHTML,publicFormats} from '../lib/resolve.mjs';
+import {GET} from '../api/replay.mjs';
+const now=1800000000000;
+const sample={movie:{duration:'7200'},videos:[{name:'sd',url:'https://vd1.okcdn.ru/low'},{name:'hd',url:'https://vd1.okcdn.ru/720'},{name:'full',url:'https://vd1.okcdn.ru/1080?expires=1800003600000'}]};
+test('inline HTML metadata decoding',()=>{const value=JSON.stringify({flashvars:{metadata:JSON.stringify(sample)}}).replaceAll('"','&quot;');assert.deepEqual(metadataFromHTML('<div data-options="'+value+'"></div>'),sample);});
+test('prefer 1080 and reject low formats',()=>{const r=publicFormats(sample,'10179955657302',now);assert.deepEqual(r.formats.map(f=>f.height),[1080,720]);assert.equal(r.expiresAt,1800003540000);});
+test('reject paid, short, non-HD, hostile and stale formats',()=>{for(const d of [{...sample,paymentInfo:{}},{...sample,movie:{duration:20}},{...sample,videos:[sample.videos[0]]},{...sample,videos:[{name:'full',url:'http://vd1.okcdn.ru/1080'}]},{...sample,videos:[{name:'full',url:'https://localhost/1080'}]},{...sample,videos:[{name:'full',url:'https://user:secret@vd1.okcdn.ru/1080'}]},{...sample,videos:[{name:'full',url:'https://vd1.okcdn.ru/v?expires=1700000000000'}]}])assert.throws(()=>publicFormats(d,'1',now));});
+test('unknown IDs cannot create an arbitrary URL proxy',async()=>{for(const id of ['1','10179955657303','https://127.0.0.1','../'])assert.equal((await GET(new Request('https://example.com/api/replay?id='+encodeURIComponent(id)))).status,404);});
