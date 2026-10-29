@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "generatedAt": 1793240778711,
+  "videos": {
+    "10179955657302": {
+      "schema": 1,
+      "id": "10179955657302",
+      "seconds": 9234,
+      "formats": [
+        {
+          "height": 1080,
+          "label": "1080p",
+          "url": "https://vd659.okcdn.ru/?expires=1793327179790&srcIp=57.151.125.215&pr=10&srcAg=UNKNOWN&ms=178.237.23.10&type=5&sig=VGTMn_imqG8&ct=0&urls=185.180.203.90&clientType=0&zs=43&id=8548603333206"
+        },
+        {
+          "height": 720,
+          "label": "720p",
+          "url": "https://vd659.okcdn.ru/?expires=1793327179790&srcIp=57.151.125.215&pr=10&srcAg=UNKNOWN&ms=178.237.23.10&type=3&sig=HaxX884L04M&ct=0&urls=185.180.203.90&clientType=0&zs=43&id=8548603333206"
+        }
+      ],
+      "expiresAt": 1793312779893
+    }
+  }
+}
