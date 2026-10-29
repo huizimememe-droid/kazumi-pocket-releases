@@ -40,17 +40,10 @@ def inspect_ok(url):
    for point in [30,int(actual/2),max(30,int(actual)-120)]:
     result=subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-xerror','-err_detect','explode','-rw_timeout','10000000','-ss',str(point),'-i',stream,'-t','3','-map','0:v:0','-map','0:a:0?','-f','null','-'],capture_output=True,text=True,timeout=30)
     if result.returncode or result.stderr.strip():raise ValueError('decode/seek failed: '+result.stderr[-500:])
-   return {'id':vid,'provider':'ok.ru','page':url,'title':movie.get('title'),'seconds':actual,'width':video['width'],'height':video['height'],'fps':video.get('avg_frame_rate'),'bitrate':info['format'].get('bit_rate'),'stream':stream,'anonymous':True,'strictDecodeAndThreeSeeks':True}
+   return {'id':vid,'provider':'ok.ru','page':url,'title':movie.get('title'),'seconds':actual,'width':video['width'],'height':video['height'],'fps':video.get('avg_frame_rate'),'bitrate':info['format'].get('bit_rate'),'stream':stream,'format':fmt.get('name'),'anonymous':True,'strictDecodeAndThreeSeeks':True}
   except Exception as e:checks.append({'format':fmt.get('name'),'error':str(e)})
  raise ValueError(json.dumps(checks) if checks else 'no anonymous HD format')
-report={'tested':[],'passed':[],'started':time.time()};queue=['https://ok.ru/videoembed/10179955657302']
-for catalogue in ['https://basketball-video.com/videos/nba_full_games/nba_playoffs_2018/8','https://basketball-video.com/2023-24']:
- try:
-  candidates=[u for u,t in links(get(catalogue))if re.search(r'\bvs\b',t,re.I)and ('2018'in t or '2024'in t)and 'WNBA'not in t]
-  for game in candidates[:2]:
-   for mid in re.findall(r'(?://|https://)ok\.ru/videoembed/(\d+)',get(game)):
-    queue.append('https://ok.ru/videoembed/'+mid)
- except Exception as e:report['tested'].append({'url':catalogue,'error':str(e)})
+report={'tested':[],'passed':[],'started':time.time()};queue=['https://ok.ru/videoembed/10071262169656']
 for url in dict.fromkeys(queue):
  try:
   result=inspect_ok(url);report['passed'].append(result);report['tested'].append({'url':url,'passed':True})
