@@ -43,7 +43,7 @@ def inspect_ok(url):
    return {'id':vid,'provider':'ok.ru','page':url,'title':movie.get('title'),'seconds':actual,'width':video['width'],'height':video['height'],'fps':video.get('avg_frame_rate'),'bitrate':info['format'].get('bit_rate'),'stream':stream,'format':fmt.get('name'),'anonymous':True,'strictDecodeAndThreeSeeks':True}
   except Exception as e:checks.append({'format':fmt.get('name'),'error':str(e)})
  raise ValueError(json.dumps(checks) if checks else 'no anonymous HD format')
-report={'tested':[],'passed':[],'started':time.time()};queue=['https://ok.ru/videoembed/15464523565624','https://ok.ru/videoembed/15464539884088','https://ok.ru/videoembed/15779847539372']
+report={'tested':[],'passed':[],'started':time.time()};queue=[]
 try:
  q=urllib.parse.urlencode({'q':'title:NBA AND mediatype:movies AND (720p OR 1080p)','output':'json','rows':'12','fl[]':['identifier','title']},doseq=True)
  report['archiveCandidates']=json.loads(get('https://archive.org/advancedsearch.php?'+q)).get('response',{}).get('docs',[])
@@ -57,11 +57,12 @@ def inspect_archive(identifier):
  meta=json.loads(get('https://archive.org/metadata/'+identifier))
  if meta.get('is_dark') or str(meta.get('metadata',{}).get('access-restricted-item','')).lower()=='true':raise ValueError('restricted archive item')
  host=meta.get('d1','')
- if not re.fullmatch(r'ia\d+\.us\.archive\.org',host):raise ValueError('unknown public archive server')
+ report.setdefault('archiveMetadata',[]).append({'identifier':identifier,'keys':list(meta)[:20],'d1':host,'d2':meta.get('d2'),'dir':meta.get('dir'),'files':[{'name':f.get('name'),'format':f.get('format'),'size':f.get('size'),'private':f.get('private')} for f in meta.get('files',[])][:8]})
+ if not re.fullmatch(r'[a-z]+\d+\.(?:us|ca|eu)\.archive\.org',host):raise ValueError('unknown public archive server: '+str(host))
  files=[f for f in meta.get('files',[])if re.search(r'\.(mp4|mkv)$',f.get('name',''),re.I)and not f.get('private')]
  files.sort(key=lambda f:(f.get('source')=='original',int(f.get('size',0))),reverse=True)
  errors=[]
- for f in files[:3]:
+ for f in files[:1]:
   stream='https://'+host+meta['dir']+'/'+urllib.parse.quote(f['name'])
   try:
    result=subprocess.run(['ffprobe','-v','error','-rw_timeout','12000000','-show_entries','stream=codec_type,codec_name,width,height,avg_frame_rate:format=duration,bit_rate','-of','json',stream],capture_output=True,text=True,timeout=35)
@@ -76,9 +77,10 @@ def inspect_archive(identifier):
    return {'identifier':identifier,'page':'https://archive.org/details/'+identifier,'title':meta.get('metadata',{}).get('title'),'url':stream,'filename':f['name'],'seconds':duration,'width':v['width'],'height':v['height'],'fps':v.get('avg_frame_rate'),'videoCodec':v['codec_name'],'audioCodec':audio['codec_name'],'bitrate':info['format'].get('bit_rate'),'anonymous':True,'strictDecodeAndThreeSeeks':True}
   except Exception as e:errors.append({'file':f['name'],'error':str(e)})
  raise ValueError(json.dumps(errors)if files else 'no public media files')
-try:
- report['archivePassed']=[inspect_archive('nba.-2015.06.04.-cavaliers.vs.-warriors.-720p.-hdtv.-30fps.x-264-reborn-4-hd')]
-except Exception as e:report['archiveMediaError']=str(e)
+report['archivePassed']=[]
+for aid in ['nba.-2014.-rd-1.-gm-2.-bobcats.vs.-heat.-720p','nba-20241113-min-por-1080p-50-katu-5-sport','nba.-2015.06.04.-cavaliers.vs.-warriors.-720p.-hdtv.-30fps.x-264-reborn-4-hd']:
+ try:report['archivePassed'].append(inspect_archive(aid))
+ except Exception as e:report.setdefault('archiveMediaErrors',[]).append({'id':aid,'error':str(e)})
 
 report['finished']=time.time();os.makedirs('probe-results',exist_ok=True)
 open('probe-results/report.json','w').write(json.dumps(report,ensure_ascii=False,indent=2))
