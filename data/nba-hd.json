@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": 1793471765166,
+  "generatedAt": 1793489135620,
   "videos": {
     "10179955657302": {
       "schema": 1,
@@ -10,15 +10,15 @@
         {
           "height": 1080,
           "label": "1080p",
-          "url": "https://vd736.okcdn.ru/?expires=1793558166640&srcIp=172.184.211.115&pr=10&srcAg=UNKNOWN&ms=95.163.35.13&type=5&sig=P7TnbU_mYtU&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206"
+          "url": "https://vd736.okcdn.ru/?expires=1793575536631&srcIp=20.124.222.83&pr=10&srcAg=UNKNOWN&ms=95.163.35.13&type=5&sig=QnrgW3WqWpY&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206"
         },
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd736.okcdn.ru/?expires=1793558166640&srcIp=172.184.211.115&pr=10&srcAg=UNKNOWN&ms=95.163.35.13&type=3&sig=m3AW2NQ2LW0&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206"
+          "url": "https://vd736.okcdn.ru/?expires=1793575536631&srcIp=20.124.222.83&pr=10&srcAg=UNKNOWN&ms=95.163.35.13&type=3&sig=uJ6YgO5b7Ao&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206"
         }
       ],
-      "expiresAt": 1793543766758
+      "expiresAt": 1793561136721
     },
     "10071262169656": {
       "schema": 1,
@@ -28,10 +28,10 @@
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd666.okcdn.ru/?expires=1793558166865&srcIp=172.184.211.115&pr=10&srcAg=UNKNOWN&ms=178.237.23.17&type=3&sig=2r0Vg1_0hsE&ct=0&urls=176.112.172.26&clientType=0&zs=43&id=8509979494968"
+          "url": "https://vd666.okcdn.ru/?expires=1793575536799&srcIp=20.124.222.83&pr=10&srcAg=UNKNOWN&ms=178.237.23.17&type=3&sig=sYF4u2KQgzs&ct=0&urls=176.112.172.26&clientType=0&zs=43&id=8509979494968"
         }
       ],
-      "expiresAt": 1793543766973
+      "expiresAt": 1793561136878
     },
     "15464539884088": {
       "schema": 1,
@@ -41,10 +41,10 @@
         {
           "height": 720,
           "label": "720p",
-          "url": "https://ok6-9.vkuser.net/?expires=1793558167081&srcIp=172.184.211.115&pr=10&srcAg=UNKNOWN&ms=95.142.206.136&type=3&sig=Jy-Ptr6jJ24&ct=0&urls=95.163.35.64%3B185.180.203.31&clientType=0&zs=43&id=16748272159288"
+          "url": "https://ok6-9.vkuser.net/?expires=1793575536954&srcIp=20.124.222.83&pr=10&srcAg=UNKNOWN&ms=95.142.206.136&type=3&sig=IoW1Abt89d0&ct=0&urls=95.163.35.64%3B185.180.203.31&clientType=0&zs=43&id=16748272159288"
         }
       ],
-      "expiresAt": 1793543767192
+      "expiresAt": 1793561137038
     }
   }
 }
