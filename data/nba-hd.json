@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": 1793688751460,
+  "generatedAt": 1793722619904,
   "videos": {
     "10179955657302": {
       "schema": 1,
@@ -10,15 +10,15 @@
         {
           "height": 1080,
           "label": "1080p",
-          "url": "https://vd659.okcdn.ru/?expires=1793775152815&srcIp=52.165.103.55&pr=10&srcAg=UNKNOWN&ms=178.237.23.10&type=5&sig=70Qcbvjk1AI&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206"
+          "url": "https://vd659.okcdn.ru/?expires=1793809021268&srcIp=134.33.77.214&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=5&sig=fqT0n0xQ8HM&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
         },
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd659.okcdn.ru/?expires=1793775152815&srcIp=52.165.103.55&pr=10&srcAg=UNKNOWN&ms=178.237.23.10&type=3&sig=71h8gjJkTFM&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206"
+          "url": "https://vd659.okcdn.ru/?expires=1793809021268&srcIp=134.33.77.214&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=3&sig=m91XeQV2jlY&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
         }
       ],
-      "expiresAt": 1793760752913
+      "expiresAt": 1793794621410
     },
     "10071262169656": {
       "schema": 1,
@@ -28,10 +28,10 @@
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd666.okcdn.ru/?expires=1793775153001&srcIp=52.165.103.55&pr=10&srcAg=UNKNOWN&ms=178.237.23.17&type=3&sig=Dc_y4nbnhCE&ct=0&urls=176.112.172.26&clientType=0&zs=43&id=8509979494968"
+          "url": "https://vd666.okcdn.ru/?expires=1793809021538&srcIp=134.33.77.214&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.17&type=3&sig=rCfD-j9aGTY&ct=0&urls=176.112.172.26&clientType=0&zs=43&id=8509979494968&rjr=8"
         }
       ],
-      "expiresAt": 1793760753088
+      "expiresAt": 1793794621689
     },
     "15464539884088": {
       "schema": 1,
@@ -41,10 +41,10 @@
         {
           "height": 720,
           "label": "720p",
-          "url": "https://ok6-9.vkuser.net/?expires=1793775153174&srcIp=52.165.103.55&pr=10&srcAg=UNKNOWN&ms=95.142.206.136&type=3&sig=lhPVeBMhTN0&ct=0&urls=95.163.35.64%3B185.180.203.31&clientType=0&zs=43&id=16748272159288"
+          "url": "https://ok6-9.vkuser.net/?expires=1793809021791&srcIp=134.33.77.214&pr=10&srcAg=UNKNOWN&ms=95.142.206.136&type=3&sig=1NPqO7nS8Xw&ct=0&urls=95.163.35.64%3B185.180.203.31&clientType=0&zs=43&id=16748272159288"
         }
       ],
-      "expiresAt": 1793760753265
+      "expiresAt": 1793794621902
     }
   }
 }
