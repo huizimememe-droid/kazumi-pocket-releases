@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": 1794217879494,
+  "generatedAt": 1794257201560,
   "videos": {
     "10179955657302": {
       "schema": 1,
@@ -10,15 +10,15 @@
         {
           "height": 1080,
           "label": "1080p",
-          "url": "https://vd736.okcdn.ru/?expires=1794304280064&srcIp=172.210.149.52&pr=10&srcAg=UNKNOWN&rjz=43&ms=95.163.35.13&type=5&sig=e9Irn5UyoBw&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206&rjr=8"
+          "url": "https://vd736.okcdn.ru/?expires=1794343602430&srcIp=74.235.90.88&pr=10&srcAg=UNKNOWN&rjz=43&ms=95.163.35.13&type=5&sig=478qV_Qr4yY&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206&rjr=8"
         },
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd736.okcdn.ru/?expires=1794304280064&srcIp=172.210.149.52&pr=10&srcAg=UNKNOWN&rjz=43&ms=95.163.35.13&type=3&sig=Mawj6KWyGPA&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206&rjr=8"
+          "url": "https://vd736.okcdn.ru/?expires=1794343602430&srcIp=74.235.90.88&pr=10&srcAg=UNKNOWN&rjz=43&ms=95.163.35.13&type=3&sig=qYQ_r5RbNbs&ct=0&urls=185.226.55.36&clientType=0&zs=43&id=8548603333206&rjr=8"
         }
       ],
-      "expiresAt": 1794289880184
+      "expiresAt": 1794329202524
     },
     "10071262169656": {
       "schema": 1,
@@ -28,10 +28,10 @@
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd666.okcdn.ru/?expires=1794304280257&srcIp=172.210.149.52&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.17&type=3&sig=x-Fimqox6Hk&ct=0&urls=176.112.172.26&clientType=0&zs=43&id=8509979494968&rjr=8"
+          "url": "https://vd666.okcdn.ru/?expires=1794343602606&srcIp=74.235.90.88&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.17&type=3&sig=N8QAnx-j1RU&ct=0&urls=185.226.55.94&clientType=0&zs=43&id=8509979494968&rjr=8"
         }
       ],
-      "expiresAt": 1794289880364
+      "expiresAt": 1794329202690
     },
     "15464539884088": {
       "schema": 1,
@@ -41,10 +41,10 @@
         {
           "height": 720,
           "label": "720p",
-          "url": "https://ok6-9.vkuser.net/?expires=1794304280435&srcIp=172.210.149.52&pr=10&srcAg=UNKNOWN&ms=95.142.206.136&type=3&sig=A4wLIlUTbAA&ct=0&urls=95.163.35.64%3B185.180.203.31&clientType=0&zs=43&id=16748272159288"
+          "url": "https://ok6-9.vkuser.net/?expires=1794343602771&srcIp=74.235.90.88&pr=10&srcAg=UNKNOWN&ms=95.142.206.136&type=3&sig=EBx0JXMAd0k&ct=0&urls=95.163.35.64%3B185.180.203.31&clientType=0&zs=43&id=16748272159288"
         }
       ],
-      "expiresAt": 1794289880521
+      "expiresAt": 1794329202859
     }
   }
 }
