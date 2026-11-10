@@ -13,11 +13,7 @@ assert manifest['buildNumber']==20351 and manifest['channel']=='kazumi-pocket'
 expected={a['name']:a for a in json.load(open(folder+'files.json'))}
 assert len(raw)==expected['update.json']['size']
 assert hashlib.sha256(raw).hexdigest()==expected['update.json']['sha256']
-try:
- release=api('/releases/tags/pocket-20351')
-except urllib.error.HTTPError as e:
- if e.code!=404:raise
- release=api('/releases',{'tag_name':'pocket-20351','target_commitish':os.environ['GITHUB_SHA'],'name':'融合版 2.4.2 · 快速起播（20351）','body':manifest['notes'],'draft':True,'prerelease':False},'POST')
+release=api('/releases/440034493')
 assert release['tag_name']=='pocket-20351'
 rid=release['id']
 assets=api('/releases/'+str(rid)+'/assets?per_page=100')
