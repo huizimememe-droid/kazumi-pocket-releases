@@ -1,0 +1,24 @@
+name: Verify and publish fusion 20351
+on:
+  push:
+    branches: [main]
+    paths: ['releases/pocket-20351/**', '.github/workflows/release-20351.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pocket-release-20351
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository == 'huizimememe-droid/kazumi-pocket-releases'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Prepare draft or publish only verified complete assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 releases/pocket-20351/publish.py

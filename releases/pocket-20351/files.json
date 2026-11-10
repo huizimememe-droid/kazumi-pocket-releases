@@ -1,0 +1,17 @@
+[
+  {
+    "name": "KazumiPocket-2.4.2-fast-start.apk",
+    "size": 33673762,
+    "sha256": "c273be065dc757fc6ff33f25ed4494cbb1d872103d71b4aee7f4fe564856966b"
+  },
+  {
+    "name": "KazumiPocket-2.4.2-fast-start-source.zip",
+    "size": 25972560,
+    "sha256": "3f0be7f3ab0dacc744e05b33fd4f3ac8c4c5f2a1bb0c0c813373cd36817064df"
+  },
+  {
+    "name": "update.json",
+    "size": 1338,
+    "sha256": "a6c8b632e19641ceee1d88ff166780ba63eb05d230bd3b26727d138a60287df1"
+  }
+]

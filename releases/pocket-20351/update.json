@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "channel": "kazumi-pocket",
+  "packageId": "com.predidit.kazumi.pocket",
+  "version": "2.4.2",
+  "buildNumber": 20351,
+  "upstreamVersion": "2.4.2",
+  "publishedAt": "2026-11-10T06:48:19.116272+00:00",
+  "notes": "融合版 2.4.2+20351 · 番剧与影视快速起播\n\n- 番剧快捷提取与网页解析并行，先成功先播放；旧解析清理完成后再处理下一集。\n- 提前挂载番剧视频画面；超分着色器在首帧后加载，减少起播等待。\n- 优化自动移动网络缓冲，限制播放调试列表的内存占用。\n- 影视保留单一普通播放器；切集复用画面与控件，保留全屏、倍速和观看进度。\n- 影视详情优先使用已有播放信息，独立处理详情请求，减少后台搜索排队。\n\n保留融合版包名与签名，可覆盖升级。完整对应源码随版本附带。已通过构建、签名和相关检查；尚无手机实测耗时对比，实际速度受片源与网络影响。",
+  "apkUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/download/pocket-20351/KazumiPocket-2.4.2-fast-start.apk",
+  "sha256": "c273be065dc757fc6ff33f25ed4494cbb1d872103d71b4aee7f4fe564856966b",
+  "releaseUrl": "https://github.com/huizimememe-droid/kazumi-pocket-releases/releases/tag/pocket-20351"
+}
