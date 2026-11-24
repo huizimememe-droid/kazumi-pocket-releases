@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": 1795465028807,
+  "generatedAt": 1795495905508,
   "videos": {
     "10179955657302": {
       "schema": 1,
@@ -10,15 +10,15 @@
         {
           "height": 1080,
           "label": "1080p",
-          "url": "https://vd659.okcdn.ru/?expires=1795551429200&srcIp=3.41.210.122&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=5&sig=xPuYfkRD7Hk&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
+          "url": "https://ok6-4.vkuser.net/?expires=1795582306044&srcIp=3.42.157.172&pr=10&srcAg=UNKNOWN&ms=95.142.206.131&type=5&sig=seXscHGX1Cg&ct=0&urls=178.237.23.10%3B95.163.35.13&clientType=0&zs=43&id=8548603333206"
         },
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd659.okcdn.ru/?expires=1795551429200&srcIp=3.41.210.122&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=3&sig=sp7qB_Z-nkM&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
+          "url": "https://ok6-4.vkuser.net/?expires=1795582306044&srcIp=3.42.157.172&pr=10&srcAg=UNKNOWN&ms=95.142.206.131&type=3&sig=a8heDZlNJXI&ct=0&urls=178.237.23.10%3B95.163.35.13&clientType=0&zs=43&id=8548603333206"
         }
       ],
-      "expiresAt": 1795537029274
+      "expiresAt": 1795567906158
     },
     "10071262169656": {
       "schema": 1,
