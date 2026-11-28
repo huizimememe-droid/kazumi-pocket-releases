@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": 1795829303021,
+  "generatedAt": 1795861831771,
   "videos": {
     "10179955657302": {
       "schema": 1,
@@ -10,15 +10,15 @@
         {
           "height": 1080,
           "label": "1080p",
-          "url": "https://vd659.okcdn.ru/?expires=1795915703413&srcIp=3.41.210.75&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=5&sig=Kwh33BUKyjE&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
+          "url": "https://vd659.okcdn.ru/?expires=1795948232779&srcIp=20.186.119.227&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=5&sig=UWicq27gfwY&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
         },
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd659.okcdn.ru/?expires=1795915703413&srcIp=3.41.210.75&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=3&sig=cNCJgF03sv8&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
+          "url": "https://vd659.okcdn.ru/?expires=1795948232779&srcIp=20.186.119.227&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.10&type=3&sig=1B4-b0j8vhU&ct=0&urls=95.163.35.13&clientType=0&zs=43&id=8548603333206&rjr=8"
         }
       ],
-      "expiresAt": 1795901303489
+      "expiresAt": 1795933832863
     },
     "10071262169656": {
       "schema": 1,
@@ -28,10 +28,10 @@
         {
           "height": 720,
           "label": "720p",
-          "url": "https://vd666.okcdn.ru/?expires=1795915703574&srcIp=3.41.210.75&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.17&type=3&sig=-XwrUCQIcdQ&ct=0&urls=176.112.172.26&clientType=0&zs=43&id=8509979494968&rjr=8"
+          "url": "https://vd666.okcdn.ru/?expires=1795948232941&srcIp=20.186.119.227&pr=10&srcAg=UNKNOWN&rjz=43&ms=178.237.23.17&type=3&sig=Nt8sCAO88oY&ct=0&urls=176.112.172.26&clientType=0&zs=43&id=8509979494968&rjr=8"
         }
       ],
-      "expiresAt": 1795901303668
+      "expiresAt": 1795933833019
     }
   }
 }
